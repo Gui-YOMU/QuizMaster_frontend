@@ -2,7 +2,7 @@
   "name": "quizmaster_frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "views/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind": "npx @tailwindcss/cli -i ./assets/styles/index.css -o ./assets/styles/build.css --watch"

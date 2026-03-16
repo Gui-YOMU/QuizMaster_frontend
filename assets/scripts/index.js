@@ -1,6 +1,4 @@
-const hello = document.getElementById("hello");
-
-async function sayHello() {
+async function getPage() {
     let url = "http://localhost:3000/";
     const response = await fetch(url, {
         method: "GET",
@@ -8,14 +6,13 @@ async function sayHello() {
             "Content-type": "application/json"
         }
     });
-    const greetings = await response.json();
-    console.log(greetings);
-    return greetings
+    const page = await response.json();
+    return page.page
 }
 
-async function displayGreetings(name) {
-    let greetings = await sayHello();
-    hello.textContent = `${greetings.message} ${name}`;
+async function redirect() {
+    let page = await getPage();
+    location.replace(`../../views/pages/${page}.html`);
 }
 
-displayGreetings("Gui YOMU");
+redirect();
