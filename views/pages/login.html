@@ -1,12 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/styles/build.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>LOGIN</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/styles/build.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Login</title>
+  </head>
+  <body class="w-dvw h-dvh flex flex-col">
+    <header class="flex justify-center p-2.5 w-full bg-[#2F48AD] h-37.5">
+      <div class="h-full">
+        <img
+          class="w-full h-full object-contain"
+          src="../../assets/images/Logo_header_bordered.png"
+          alt="banner"
+        />
+      </div>
+    </header>
+    <main class="w-full h-full flex flex-col justify-center items-center gap-6">
+      <h1 class="font-bold text-3xl">Page de connexion</h1>
+      <div class="bg-bg p-3.5 w-1/2 border border-border rounded-lg flex flex-col gap-5 justify-center items-center">
+        <form class="w-1/2 flex flex-col gap-5" id="login" action="">
+          <div class="flex flex-col">
+            <label for="mail">Email<span class="text-error font-bold">*</span></label>
+            <input class="bg-card border border-border rounded-lg pt-1 pb-1 pr-4 pl-4" type="mail" id="mail" name="mail" placeholder="Ex : dupont.martin@gmail.com"/>
+          </div>
+          <div class="flex flex-col">
+            <label class="self-start" for="password">Mot de passe<span class="text-error font-bold">*</span></label>
+            <input class="bg-card border border-border rounded-lg pt-1 pb-1 pr-4 pl-4" type="password" id="password" name="password" placeholder="12+ majuscule, minuscule et chiffre"/>
+          </div>
+          <button class="bg-mainblue text-white p-2 rounded-lg font-semibold w-5/6 m-auto">Se connecter</button>
+        </form>
+        <a class="font-bold underline" href="">Mot de passe oublié ?</a>
+      </div>
+      <div>
+        <p class="text-center">Pas encore inscrit ?</p>
+        <p class="text-center">Cliquez <span><a class="font-bold" href="./signin.html">ici</a></span> pour vous inscrire</p>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
 </html>
