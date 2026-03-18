@@ -9,18 +9,37 @@ signin.addEventListener("submit", async (e) => {
     signinData.get("surname"),
     signinData.get("mail"),
     signinData.get("password"),
-    signinData.get("confirmPassword")
+    signinData.get("confirmPassword"),
   );
 });
 
-async function createUser(lastName, firstName, surname, mail, password, confirmPassword) {
-    const response = await fetch("http://localhost:3000/users", {
-        method: "POST",
-        body: JSON.stringify({ lastName, firstName, surname, mail, password, confirmPassword }),
-        headers: {
-            "Content-type": "application/json"
-        }
-    });
-    const message = await response.json();
-    return message.message
+async function createUser(
+  lastName,
+  firstName,
+  surname,
+  mail,
+  password,
+  confirmPassword,
+) {
+  const response = await fetch("http://localhost:3000/users", {
+    method: "POST",
+    body: JSON.stringify({
+      lastName,
+      firstName,
+      surname,
+      mail,
+      password,
+      confirmPassword,
+    }),
+    headers: {
+      "Content-type": "application/json",
+    },
+  });
+  const result = await response.json();
+  if (result.success) {
+    location.replace(`../../views/pages/login.html`);
+    return;
+  } else if (result.error) {
+    return result.error;
+  }
 }
