@@ -13,7 +13,7 @@ async function login(
   mail,
   password,
 ) {
-  const response = await fetch("http://localhost:3000/users/login", {
+  const response = await fetch("http://localhost:3000/user/login", {
     method: "POST",
     body: JSON.stringify({
       mail,
