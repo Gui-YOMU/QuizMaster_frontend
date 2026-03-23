@@ -21,7 +21,7 @@ async function createUser(
   password,
   confirmPassword,
 ) {
-  const response = await fetch("http://localhost:3000/user/signin", {
+  const response = await fetch("http://localhost:3000/users/signin", {
     method: "POST",
     body: JSON.stringify({
       lastName,
