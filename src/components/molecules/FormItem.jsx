@@ -10,6 +10,7 @@ export default function FormItem(props) {
         id={props.name}
         name={props.name}
         placeholder={props.placeholder}
+        onChange={props.onChange}
       />
     </div>
   );
