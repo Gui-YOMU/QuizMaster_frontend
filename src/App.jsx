@@ -1,12 +1,17 @@
-import Logo from './components/atoms/Logo.jsx'
+import { Routes, Route } from "react-router-dom";
+import Login from "./pages/Login.jsx";
+import Signin from "./pages/Signin.jsx";
+import AuthLayout from "./components/templates/AuthLayout.jsx";
 
 function App() {
-
   return (
-    <div class="flex justify-center p-2.5 w-full bg-mainblue h-37.5">
-      <Logo />
-    </div>
-  )
+    <Routes>
+      <Route element={<AuthLayout />}>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signin" element={<Signin />} />
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;
