@@ -3,6 +3,7 @@ import FormItem from "../molecules/FormItem.jsx";
 import Button from "../atoms/Button.jsx";
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SigninForm() {
   const [lastName, setLastName] = useState("");
@@ -11,6 +12,8 @@ export default function SigninForm() {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const Navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -32,6 +35,8 @@ export default function SigninForm() {
 
     const data = await response.json();
     console.log(data);
+
+    data.success ? Navigate("/login") : alert("Erreur lors de l'inscription");
   }
 
   return (
