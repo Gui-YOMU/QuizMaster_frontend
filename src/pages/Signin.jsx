@@ -1,7 +1,7 @@
 import SigninForm from "../components/organisms/SigninForm.jsx";
 import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function Signin() {
   return (
     <>
       <SigninForm />
